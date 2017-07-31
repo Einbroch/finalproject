@@ -13,10 +13,8 @@
 	<form method="post">
 		<a href="/project/regist/registPage">regist</a>
 		<br> 
-		<input type="text"
-			id="user_userid" name="user_userid" placeholder="ID"><br>
-		<input type="password" id="user_password" name="user_password"
-			placeholder="Password">
+		<input type="text" id="user_userid" name="user_userid" placeholder="ID"><br>
+		<input type="password" id="user_password" name="user_password" placeholder="Password">
 		<button id="login" type="button">로그인</button>
 	</form>
 
