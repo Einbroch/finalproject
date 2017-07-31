@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ariarose.team.project.model.RegistDAO">
+	<select id="checkUserId" parameterType="UserVO" resultType="int">
+		SELECT 
+			COUNT(*) 
+		FROM 
+			USER 
+		WHERE 
+			USER_USERID = #{user_userId}
+	</select>
+	
+	<insert id="registUser" parameterType="UserVO">
+		INSERT INTO FINALPROJECT.USER (
+			USER_PART, 
+			USER_USERID, 
+			USER_PASSWORD, 
+			USER_NAME, 
+			USER_PHONENUMBER, 
+			USER_EMAIL) 
+		VALUES (
+			#{user_part}, 
+			#{user_userId}, 
+			#{user_password}, 
+			#{user_name}, 
+			#{user_phoneNumber}, 
+			#{user_email});
+		
+	</insert>
+</mapper>

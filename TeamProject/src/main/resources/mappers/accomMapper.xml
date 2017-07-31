@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ariarose.team.project.model.AccomDAO">
+	<insert id="registAccom" parameterType="AccomVO">
+		INSERT INTO FINALPROJECT.ACCOM (
+			ACCOM_USER_ID,
+			ACCOM_PART, 
+			ACCOM_NAME, 
+			ACCOM_NUMBER, 
+			ACCOM_LINK, 
+			ACCOM_OPTION, 
+			ACCOM_ADDR) 
+		VALUES (
+			#{accom_user_id}, 
+			#{accom_part}, 
+			#{accom_name},
+			#{accom_number}, 
+			#{accom_link}, 
+			#{accom_option}, 
+			#{accom_addr})
+	</insert>
+
+</mapper>
